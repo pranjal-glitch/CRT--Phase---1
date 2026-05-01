@@ -2,13 +2,13 @@
 using namespace std;
 
 /*
-    File Name: vowel_or_consonant_if_else.cpp
-    Program: Vowel or Consonant Checker (Using if-else)
+    File Name: vowel_or_consonant_switch.cpp
+    Program: Vowel or Consonant Checker using Switch Case
     Author: Pranjal Srivastava
 
     Description:
-    This program takes a single character as input and checks
-    whether it is a vowel or a consonant using if-else conditions.
+    This program checks whether the entered character is a vowel
+    or consonant using switch-case. It also validates input.
 */
 
 int main() {
@@ -18,15 +18,17 @@ int main() {
     cout << "Enter a single alphabet: ";
     cin >> ch;
 
-    // Check if alphabet
+    // Check if input is alphabet
     if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
 
-        // Check vowel
-        if (ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' ||
-            ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U') {
-            cout << "Vowel";
-        } else {
-            cout << "Consonant";
+        switch(ch) {
+            case 'a': case 'e': case 'i': case 'o': case 'u':
+            case 'A': case 'E': case 'I': case 'O': case 'U':
+                cout << "Vowel";
+                break;
+
+            default:
+                cout << "Consonant";
         }
 
     } else {
