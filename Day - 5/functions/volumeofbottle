@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+void vol_Of_bottle(){
+   int a;
+   cout << "Enter the number of bottles: ";
+   cin >> a;
+   int vol = (250*a);
+    cout << "Volume of the bottle in ml is: " << vol << endl;
+}
+
+int main(){
+
+    vol_Of_bottle();
+    return 0;
+    
+}
