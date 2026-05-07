@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Students {
+public:
+    int roll_no;
+    string name;
+
+    // Default Constructor
+    Students() {
+        roll_no = 0;
+        name = "No Name";
+    }
+
+    // Parameterized Constructor
+    Students(int r, string n) {
+        roll_no = r;
+        name = n;
+    }
+
+    void display() {
+        cout << "Roll No: " << roll_no << endl;
+        cout << "Name: " << name << endl;
+    }
+};
+
+int main() {
+
+    // Default constructor call
+    Students s1;
+
+    // Parameterized constructor call
+    Students s2(101, "Pranjal");
+
+    cout << "Student 1:" << endl;
+    s1.display();
+
+    cout << "\nStudent 2:" << endl;
+    s2.display();
+
+    return 0;
+}
